@@ -1,0 +1,272 @@
+@import './reset';
+@import './vars';
+
+/* Animation */
+@keyframes rolling {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-1.5em);
+  }
+  100% {
+      transform: translateY(-3em);
+  }
+}
+
+/* CSS Reset */
+body {
+  background-color: #1f3844;
+  color: #f2f2f2;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.profile {
+  background-image: url(../assets/profile.png);
+  background-size: cover;
+  background-position: center;
+  padding-top: 56.25%;
+}
+
+.aboutMe {
+  position: relative;
+  padding: 5% 3%;
+  
+  $paddingBottom: 10%;
+
+  &__header {
+    padding-bottom: $paddingBottom;
+
+    .aboutMe__title {
+      font-size: 5vw;
+      line-height: 1.5;
+      font-style: italic;
+      font-family: 'Black Han Sans', sans-serif;
+      margin-bottom: 10px;
+
+      .aboutMe__modifierWrap {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        height: 1.5em;
+        overflow: hidden;
+        padding-right: 0.5em;
+        color: $highliteColor;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: inset 0 0 5px 5px $masterColor;
+          margin-left: -1em;
+        }
+
+        .aboutMe__modifier {
+          animation-name: rolling;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-direction: reverse;
+
+          li {
+            text-shadow: 0.2em 0.2em 5px #000;
+          }
+        }
+      }
+
+      /* 이름 */
+      .aboutMe__name {
+        line-height: 1.2;
+        margin-left: -0.3em;
+        font-weight: 900;
+
+        &--ko {
+          font-size: 1.8em;
+        }
+
+        &--en {
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    /* 연락망 */
+    .aboutMe__contact {
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-size: 1.1em;
+
+      dt {
+        color: $highliteColor;
+        float: left;
+        width: 2em;
+      }
+
+      dd {
+        overflow: hidden;
+        font-weight: 600;
+        margin-bottom: 0px;
+      }
+
+      .contact__link a:hover {
+        color: $highliteColor;
+      }
+    }
+
+    .aboutMe__introduce {
+      font-size: 0.9em;
+      line-height: 1.4;
+      margin-bottom: 22px;
+      text-align: justify;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__section {
+    padding-bottom: $paddingBottom;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &Title {
+      color: $basicColor;
+      border-top: 3px solid;
+      margin-bottom: 25px;
+      padding-top: 0.2em;
+      letter-spacing: 0.2em;
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+
+    .aboutMe__timeline {
+      position: relative;
+      padding: 30px 0;
+
+      &::before {
+        content: "";
+        width: 5px;
+        height: 100%;
+        background: #000;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        border-radius: 30px;
+      }
+    }
+
+    .timeline {
+      &__event {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .timeline__title {
+          display: inline-block;
+          padding: 3px 20%;
+          background-color: $highliteColor;
+          border-radius: 16px;
+          font-size: 1em;
+          font-weight: 600px;
+        }
+
+        .timeline__body {
+          background: $subColor;
+          border-radius: 15px;
+          font-size: 0.6em;
+          padding: 30px 15px 15px;
+          margin-top: -11px;
+          line-height: 1.4;
+          text-align: center;
+
+          .timeline__content {
+            .timeline__place {
+              font-size: 1.3em;
+              font-weight: 600;
+            }
+
+            .timeline__position {
+              color: #bbb;
+            }
+          }
+          
+          .timeline__skills {
+            padding-top: 1em;
+
+            dt {
+              color: $highliteColor;
+              font-weight: 600;
+              font-size: 1.1em;
+            }
+
+            dd {
+              display: inline-block;
+              margin-right: 5px;
+              font-weight: 600;
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .aboutMe__projects {
+      border: 1px solid transparent;
+
+      .aboutMe__project {
+        margin-bottom: 20px;
+        border: 1px solid $subColor;
+        border-radius: 15px;
+        overflow: hidden;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .project__header {
+          position: relative;
+          padding-top: 50%;
+          transition: opacity 1s, transform 1s;
+
+          &:hover {
+            opacity: .7;
+            transform: scale3d(1.1, 1.1, 1);
+          }
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .project__body {
+          position: relative;
+          padding: 10px;
+          background-color: $subColor;
+        }
+      }
+    }
+  }
+}

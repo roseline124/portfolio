@@ -1,0 +1,397 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Animation */
+@keyframes rolling {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.5em);
+  }
+  100% {
+    transform: translateY(-3em);
+  }
+}
+
+/* CSS Reset */
+body {
+  background-color: #1f3844;
+  color: #f2f2f2;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.profile {
+  background-image: url(images/07b3cbef0c372927926461b94c21164a-profile.png);
+  background-size: cover;
+  background-position: center;
+  padding-top: 56.25%;
+}
+
+.aboutMe {
+  position: relative;
+  padding: 5% 3%;
+}
+
+.aboutMe__header {
+  padding-bottom: 10%;
+  /* 연락망 */
+}
+
+.aboutMe__header .aboutMe__title {
+  font-size: 5vw;
+  line-height: 1.5;
+  font-style: italic;
+  font-family: 'Black Han Sans', sans-serif;
+  margin-bottom: 10px;
+  /* 이름 */
+}
+
+.aboutMe__header .aboutMe__title .aboutMe__modifierWrap {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  height: 1.5em;
+  overflow: hidden;
+  padding-right: 0.5em;
+  color: #e8823a;
+}
+
+.aboutMe__header .aboutMe__title .aboutMe__modifierWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 5px 5px #1f3844;
+  margin-left: -1em;
+}
+
+.aboutMe__header .aboutMe__title .aboutMe__modifierWrap .aboutMe__modifier {
+  animation-name: rolling;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.aboutMe__header .aboutMe__title .aboutMe__modifierWrap .aboutMe__modifier li {
+  text-shadow: 0.2em 0.2em 5px #000;
+}
+
+.aboutMe__header .aboutMe__title .aboutMe__name {
+  line-height: 1.2;
+  margin-left: -0.3em;
+  font-weight: 900;
+}
+
+.aboutMe__header .aboutMe__title .aboutMe__name--ko {
+  font-size: 1.8em;
+}
+
+.aboutMe__header .aboutMe__title .aboutMe__name--en {
+  font-size: 0.8em;
+}
+
+.aboutMe__header .aboutMe__contact {
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.aboutMe__header .aboutMe__contact dt {
+  color: #e8823a;
+  float: left;
+  width: 2em;
+}
+
+.aboutMe__header .aboutMe__contact dd {
+  overflow: hidden;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.aboutMe__header .aboutMe__contact .contact__link a:hover {
+  color: #e8823a;
+}
+
+.aboutMe__header .aboutMe__introduce {
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
+.aboutMe__header .aboutMe__introduce:last-child {
+  margin-bottom: 0;
+}
+
+.aboutMe__section {
+  padding-bottom: 10%;
+}
+
+.aboutMe__section:last-child {
+  margin-bottom: 0;
+}
+
+.aboutMe__sectionTitle {
+  color: #f2f2f2;
+  border-top: 3px solid;
+  margin-bottom: 25px;
+  padding-top: 0.2em;
+  letter-spacing: 0.2em;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.aboutMe__section .aboutMe__timeline {
+  position: relative;
+  padding: 30px 0;
+}
+
+.aboutMe__section .aboutMe__timeline::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.aboutMe__section .timeline__event {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.aboutMe__section .timeline__event:last-child {
+  margin-bottom: 0;
+}
+
+.aboutMe__section .timeline__event .timeline__title {
+  display: inline-block;
+  padding: 3px 20%;
+  background-color: #e8823a;
+  border-radius: 16px;
+  font-size: 1em;
+  font-weight: 600px;
+}
+
+.aboutMe__section .timeline__event .timeline__body {
+  background: #2e6872;
+  border-radius: 15px;
+  font-size: 0.6em;
+  padding: 30px 15px 15px;
+  margin-top: -11px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.aboutMe__section .timeline__event .timeline__body .timeline__content .timeline__place {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.aboutMe__section .timeline__event .timeline__body .timeline__content .timeline__position {
+  color: #bbb;
+}
+
+.aboutMe__section .timeline__event .timeline__body .timeline__skills {
+  padding-top: 1em;
+}
+
+.aboutMe__section .timeline__event .timeline__body .timeline__skills dt {
+  color: #e8823a;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.aboutMe__section .timeline__event .timeline__body .timeline__skills dd {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.aboutMe__section .timeline__event .timeline__body .timeline__skills dd:last-child {
+  margin-right: 0;
+}
+
+.aboutMe__section .aboutMe__projects {
+  border: 1px solid transparent;
+}
+
+.aboutMe__section .aboutMe__projects .aboutMe__project {
+  margin-bottom: 20px;
+  border: 1px solid #2e6872;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.aboutMe__section .aboutMe__projects .aboutMe__project:last-child {
+  margin-bottom: 0;
+}
+
+.aboutMe__section .aboutMe__projects .aboutMe__project .project__header {
+  position: relative;
+  padding-top: 50%;
+  transition: opacity 1s, transform 1s;
+}
+
+.aboutMe__section .aboutMe__projects .aboutMe__project .project__header:hover {
+  opacity: .7;
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+.aboutMe__section .aboutMe__projects .aboutMe__project .project__header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutMe__section .aboutMe__projects .aboutMe__project .project__body {
+  position: relative;
+  padding: 10px;
+  background-color: #2e6872;
+}
+
