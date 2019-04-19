@@ -131,6 +131,7 @@ table {
   border-spacing: 0;
 }
 
+/* 문단 */
 /* Animation */
 @keyframes rolling {
   0% {
@@ -190,6 +191,7 @@ a {
   overflow: hidden;
   padding-right: 0.5em;
   color: #e8823a;
+  margin-left: 0.3em;
 }
 
 .aboutMe__header .aboutMe__title .aboutMe__modifierWrap::after {
@@ -217,7 +219,7 @@ a {
 .aboutMe__header .aboutMe__title .aboutMe__name {
   line-height: 1.2;
   margin-left: -0.3em;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .aboutMe__header .aboutMe__title .aboutMe__name--ko {
@@ -242,7 +244,7 @@ a {
 
 .aboutMe__header .aboutMe__contact dd {
   overflow: hidden;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0px;
 }
 
@@ -297,26 +299,26 @@ a {
   border-radius: 30px;
 }
 
-.aboutMe__section .timeline__event {
+.aboutMe__section .aboutMe__timeline .timeline__event {
   text-align: center;
   font-size: 1.3rem;
   margin-bottom: 25px;
 }
 
-.aboutMe__section .timeline__event:last-child {
+.aboutMe__section .aboutMe__timeline .timeline__event:last-child {
   margin-bottom: 0;
 }
 
-.aboutMe__section .timeline__event .timeline__title {
+.aboutMe__section .aboutMe__timeline .timeline__event .timeline__title {
   display: inline-block;
   padding: 3px 20%;
   background-color: #e8823a;
   border-radius: 16px;
   font-size: 1em;
-  font-weight: 600px;
+  font-weight: 700;
 }
 
-.aboutMe__section .timeline__event .timeline__body {
+.aboutMe__section .aboutMe__timeline .timeline__event .timeline__body {
   background: #2e6872;
   border-radius: 15px;
   font-size: 0.6em;
@@ -326,72 +328,187 @@ a {
   text-align: center;
 }
 
-.aboutMe__section .timeline__event .timeline__body .timeline__content .timeline__place {
+.aboutMe__section .aboutMe__timeline .timeline__event .timeline__body .timeline__content .timeline__place {
   font-size: 1.3em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.aboutMe__section .timeline__event .timeline__body .timeline__content .timeline__position {
+.aboutMe__section .aboutMe__timeline .timeline__event .timeline__body .timeline__content .timeline__position {
   color: #bbb;
+  margin-bottom: 10px;
 }
 
-.aboutMe__section .timeline__event .timeline__body .timeline__skills {
+.aboutMe__section .aboutMe__timeline .timeline__event .timeline__body .timeline__skills {
   padding-top: 1em;
 }
 
-.aboutMe__section .timeline__event .timeline__body .timeline__skills dt {
+.aboutMe__section .aboutMe__timeline .timeline__event .timeline__body .timeline__skills dt {
   color: #e8823a;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.1em;
 }
 
-.aboutMe__section .timeline__event .timeline__body .timeline__skills dd {
+.aboutMe__section .aboutMe__timeline .timeline__event .timeline__body .timeline__skills dd {
   display: inline-block;
   margin-right: 5px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.aboutMe__section .timeline__event .timeline__body .timeline__skills dd:last-child {
+.aboutMe__section .aboutMe__timeline .timeline__event .timeline__body .timeline__skills dd:last-child {
   margin-right: 0;
 }
 
-.aboutMe__section .aboutMe__projects {
-  border: 1px solid transparent;
-}
-
-.aboutMe__section .aboutMe__projects .aboutMe__project {
-  margin-bottom: 20px;
+.aboutMe__section .aboutMe__projectList .project {
+  margin-bottom: 2em;
   border: 1px solid #2e6872;
   border-radius: 15px;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.aboutMe__section .aboutMe__projects .aboutMe__project:last-child {
-  margin-bottom: 0;
+.aboutMe__section .aboutMe__projectList .project__picture {
+  padding: 25% 0;
 }
 
-.aboutMe__section .aboutMe__projects .aboutMe__project .project__header {
-  position: relative;
-  padding-top: 50%;
-  transition: opacity 1s, transform 1s;
+.aboutMe__section .aboutMe__projectList .project__picture.wordHunter {
+  background-image: url(images/bda6fd7e3f592ecd2209311e8886bdcd-WordHunter.png);
+  background-size: cover;
 }
 
-.aboutMe__section .aboutMe__projects .aboutMe__project .project__header:hover {
-  opacity: .7;
-  transform: scale3d(1.1, 1.1, 1);
+.aboutMe__section .aboutMe__projectList .project__picture.portfolio {
+  background-image: url(images/d0d26fb19fcc04c7dc4ddcc94824f7a4-Portfolio.png);
+  background-size: cover;
 }
 
-.aboutMe__section .aboutMe__projects .aboutMe__project .project__header img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.aboutMe__section .aboutMe__projectList .project__picture.webGame {
+  background-image: url(images/ee04ba16a065ca752944ba8d47d504b4-Webgame.png);
+  background-size: cover;
 }
 
-.aboutMe__section .aboutMe__projects .aboutMe__project .project__body {
-  position: relative;
-  padding: 10px;
+.aboutMe__section .aboutMe__projectList .project__description {
+  padding: 1em;
   background-color: #2e6872;
+}
+
+.aboutMe__section .aboutMe__projectList .project__description h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.aboutMe__section .aboutMe__projectList .project__description p {
+  font-size: 0.9em;
+  line-height: 1.4;
+  text-align: justify;
+  margin-bottom: 0.7em;
+}
+
+.aboutMe__section .aboutMe__projectList .project__description .project__skills {
+  font-size: 0.9em;
+}
+
+.aboutMe__section .aboutMe__projectList .project__description .project__skills dt {
+  color: #e8823a;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.aboutMe__section .aboutMe__projectList .project__description .project__skills dd {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.aboutMe__section .aboutMe__projectList .project__description .project__skills dd:last-child {
+  margin-right: 0;
+}
+
+.aboutMe__section .aboutMe__projectList .project__description .project__skills dt {
+  margin-bottom: 0.3em;
+}
+
+.aboutMe__section .aboutMe__projectList .project__description .project__skills dd {
+  display: block;
+  line-height: 1.5em;
+}
+
+@media (min-width: 849px) {
+  .profile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 55vw;
+    height: 100vh;
+    padding: 0;
+  }
+  .aboutMe {
+    margin-left: 55vw;
+  }
+  .aboutMe__header .aboutMe__title {
+    font-size: 2vw;
+  }
+  .aboutMe .aboutMe__timeline {
+    padding: 40px 0 120px;
+  }
+  .aboutMe .aboutMe__timeline .timeline__event {
+    width: 50%;
+    position: relative;
+  }
+  .aboutMe .aboutMe__timeline .timeline__event .timeline__body {
+    text-align: justify;
+  }
+  .aboutMe .aboutMe__timeline .timeline__event:nth-child(odd) {
+    padding-right: 1.2em;
+    text-align: right;
+  }
+  .aboutMe .aboutMe__timeline .timeline__event:nth-child(odd)::before {
+    content: "";
+    border-width: 12px 0 12px 23px;
+    border-style: solid;
+    border-color: transparent transparent transparent #e8823a;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-50%);
+  }
+  .aboutMe .aboutMe__timeline .timeline__event:nth-child(odd) .timeline__title::after {
+    content: "";
+    display: inline-block;
+    background-color: #f2f2f2;
+    border: 13px double #e8823a;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50%);
+  }
+  .aboutMe .aboutMe__timeline .timeline__event:nth-child(even) {
+    margin-left: auto;
+    margin-top: -80px;
+    margin-bottom: -80px;
+    padding-left: 1.2em;
+    text-align: left;
+  }
+  .aboutMe .aboutMe__timeline .timeline__event:nth-child(even)::before {
+    content: "";
+    border-width: 12px 23px 12px 0;
+    border-style: solid;
+    border-color: transparent #e8823a transparent transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(50%);
+  }
+  .aboutMe .aboutMe__timeline .timeline__event:nth-child(even) .timeline__title::after {
+    content: "";
+    display: inline-block;
+    background-color: #f2f2f2;
+    border: 13px double #e8823a;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+  }
 }
 

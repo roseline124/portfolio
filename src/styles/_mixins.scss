@@ -1,0 +1,17 @@
+@mixin skill-set-style {
+  dt {
+    color: $highliteColor;
+    font-weight: $fontBold;
+    font-size: 1.1em;
+  }
+
+  dd {
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: $fontBold;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
