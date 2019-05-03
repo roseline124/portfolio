@@ -103,18 +103,19 @@ a {
     .aboutMe__contact {
       margin-bottom: 25px;
       line-height: 1.6;
-      font-size: 1.1em;
 
       dt {
         color: $highliteColor;
         float: left;
         width: 2em;
+        font-size: 1.3rem;
       }
 
       dd {
         overflow: hidden;
         font-weight: $fontBold;
         margin-bottom: 0px;
+        font-size: 1.2rem;
       }
 
       .contact__link a:hover {
