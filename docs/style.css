@@ -233,19 +233,20 @@ a {
 .aboutMe__header .aboutMe__contact {
   margin-bottom: 25px;
   line-height: 1.6;
-  font-size: 1.1em;
 }
 
 .aboutMe__header .aboutMe__contact dt {
   color: #e8823a;
   float: left;
   width: 2em;
+  font-size: 1.3rem;
 }
 
 .aboutMe__header .aboutMe__contact dd {
   overflow: hidden;
   font-weight: 700;
   margin-bottom: 0px;
+  font-size: 1.2rem;
 }
 
 .aboutMe__header .aboutMe__contact .contact__link a:hover {
